@@ -1,8 +1,10 @@
 import { FaBars, FaMoon, FaSun, FaTimes } from "react-icons/fa";
 import { useState } from "react";
-import logo from "../assets/logo/logo.png";
-
-export function NavBar({ darkMode, setDarkMode }) {
+interface NavBarProps {
+    darkMode: boolean;
+    setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+}
+export function NavBar({ darkMode, setDarkMode}:NavBarProps ) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (

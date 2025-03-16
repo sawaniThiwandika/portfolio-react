@@ -1,26 +1,11 @@
-import { useState, useEffect } from "react";
+
 import cover from "../assets/cover/cropCoverImage.png";
 
 
 import '../styles/IntroCss.css';
 
 export function Intro() {
-    const [currentText, setCurrentText] = useState("Software Engineer");
 
-   /* const texts = [
-        "Software Engineer",
-        "Web Developer",
-    ];*/
-/*
-    useEffect(() => {
-        let index = 0;
-        const intervalId = setInterval(() => {
-            index = (index + 1) % texts.length;
-            setCurrentText(texts[index]);
-        }, 1000);
-
-        return () => clearInterval(intervalId);
-    }, []);*/
 
     return (
         <section className="text-center mt-10 flex flex-col md:flex-row items-center justify-between">
