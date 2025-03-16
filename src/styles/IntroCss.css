@@ -1,0 +1,19 @@
+/* Define the keyframes for the shine effect */
+@keyframes shine {
+    0% {
+        background-position: -100%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+
+/* Apply the shine animation to the text */
+.shine-animation {
+    background: linear-gradient(to right, transparent 0%, gray 25%, hotpink 50%, gray 75%, transparent 100%);
+    background-size: 200% 100%; /* Adjust background size for a smooth transition */
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text; /* For Safari */
+    animation: shine 2s infinite alternate-reverse;
+}
