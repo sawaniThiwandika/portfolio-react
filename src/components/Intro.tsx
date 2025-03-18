@@ -31,7 +31,7 @@ export function Intro() {
                 <img
                     src={cover}
                     alt="Sawani Thiwandika"
-                    className="w-1/2 object-cover filter contrast-125 brightness-40 saturate-10"
+                    className="mt-20 w-1/2 object-cover filter contrast-125 brightness-40 saturate-10"
                 />
             </div>
         </section>
