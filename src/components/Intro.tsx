@@ -24,6 +24,7 @@ export function Intro() {
                     >
                         Contact Me
                     </a>
+                    <p>contact:</p>
                 </div>
             </div>
 
