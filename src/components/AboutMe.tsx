@@ -3,7 +3,7 @@ export function AboutMe() {
         <section id="about" className="mt-16 pt-10 px-5 w-full flex flex-col md:flex-row items-center">
 
             <div className="w-full md:w-1/5 text-center p-3 flex items-center justify-center">
-                <h1 className="text-5xl font-semibold text-pink-400 md:text-3xl">About Me</h1>
+                <h1 className="text-3xl font-semibold text-pink-400 md:text-5xl">About Me</h1>
             </div>
 
 
