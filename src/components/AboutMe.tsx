@@ -9,7 +9,6 @@ export function AboutMe() {
 
             <div className="w-px bg-gray-400 h-24 hidden md:block"></div>
 
-
             <div className="w-full md:w-4/5 pl-6 md:flex items-center">
                 <p className="mt-4 md:mt-0 text-lg leading-relaxed text-gray-400 pr-6" style={{textAlign: "justify"}}>
                     I am a dedicated Software Engineer from Sri Lanka, currently pursuing a BSc (Hons) in IT at the
