@@ -17,7 +17,7 @@ export function Portfolio() {
             <div className="container mx-auto px-6 flex flex-col items-center">
                 <Intro />
                 <AboutMe />
-                <TechStack />
+                <TechStack darkMode={darkMode} setDarkMode={setDarkMode}  />
                 <Service />
                 <Projects />
                 <ContactMe />
