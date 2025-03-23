@@ -6,9 +6,9 @@ interface TechStackProps {
     darkMode: boolean;
 
 }
-export function TechStack({ darkMode}:TechStackProps ) {
+export function TechStack({darkMode}:TechStackProps ) {
     return (
-        <section id="tech" className="mt-20 py-16 px-6">
+        <section id="tech" className="mt-20 py-16 px-6 w-5/6">
             <h2 className={`text-4xl font-bold ${darkMode ? 'text-purple-400' : 'text-purple-600'} text-center mb-12`}>
                 TechStack
             </h2>
