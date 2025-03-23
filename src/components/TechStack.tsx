@@ -1,9 +1,17 @@
+import { useState, useEffect } from "react";
 import { SiReact, SiReactrouter, SiTailwindcss, SiBootstrap, SiHtml5, SiCss3, SiJavascript,
     SiTypescript, SiSpringboot, SiPython, SiNodedotjs, SiFirebase, SiMysql, SiMongodb,
     SiFigma, SiPostman, SiC, SiExpress } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 
-export function TechStack({ darkMode }) {
+export function TechStack() {
+    const [darkMode, setDarkMode] = useState(false);
+
+    useEffect(() => {
+        const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        setDarkMode(prefersDarkMode);
+    }, []);
+
     return (
         <section id="tech" className="mt-20 py-16 px-6">
             <h2 className={`text-4xl font-bold ${darkMode ? 'text-blue-500' : 'text-blue-700'} text-center mb-12`}>
