@@ -19,7 +19,7 @@ export function Portfolio() {
                 <AboutMe />
                 <TechStack darkMode={darkMode}  />
                 <Service />
-                <Projects />
+                <Projects darkMode={darkMode} />
                 <ContactMe />
             </div>
         </div>

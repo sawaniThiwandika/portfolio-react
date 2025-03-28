@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 
-export function Projects() {
+interface ProjectsProps {
+    darkMode: boolean;
+}
+
+export function Projects({ darkMode }: ProjectsProps) {
     const projects = [
         {
             name: "GreenShadow - Farm Management System",
@@ -24,35 +28,35 @@ export function Projects() {
 
     return (
         <section id="projects" className="p-6">
-            <h2 className="text-3xl font-semibold text-purple-400 mb-4">Projects</h2>
+            <h2 className={`text-3xl font-semibold ${darkMode ? 'text-purple-400' : 'text-purple-600'} mb-4`}>
+                Projects
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {projects.map((project, index) => (
                     <motion.div
                         key={index}
-                        className="p-4 border rounded-lg shadow-lg bg-gray-800 text-white relative overflow-hidden"
+                        className="p-4 border rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
                         initial={{ boxShadow: "0px 0px 10px rgba(255, 255, 255, 0.2)" }}
                         animate={{
                             boxShadow: [
-                                "0px 0px 10px rgba(255, 255, 255, 0.2)",
-                                "0px 0px 20px rgba(255, 255, 255, 0.5)",
-                                "0px 0px 10px rgba(255, 255, 255, 0.2)"
+                                "0px 0px 10px rgba(255, 182, 193, 0.2)", // Light Pink
+                                "0px 0px 20px rgba(138, 43, 226, 0.5)", // Purple
+                                "0px 0px 10px rgba(230, 230, 250, 0.2)"  // Lavender
                             ]
                         }}
                         transition={{ duration: 2, repeat: Infinity, repeatType: "mirror" }}
                     >
-                        <h3 className="text-xl font-bold text-blue-300">{project.name}</h3>
-                        <p className="mt-2 text-gray-400">{project.description}</p>
-                        <p className="mt-2 text-gray-300"><strong>Technologies:</strong> {project.technologies.join(", ")}</p>
+                        <h3 className={`text-xl font-bold ${darkMode ? 'text-pink-400' : 'text-purple-600'}`}>{project.name}</h3>
+                        <p className={`mt-2 ${darkMode ? 'text-gray-400' : 'text-gray-700'}`}>{project.description}</p>
+                        <p className={`mt-2 text-purple-300`}>Technologies: {project.technologies.join(", ")}</p>
                         <a
                             href={project.link}
-                            className="mt-3 inline-block text-blue-400 hover:text-blue-500"
+                            className={`mt-3 inline-block ${darkMode ? 'text-purple-400 hover:text-purple-500' : 'text-purple-600 hover:text-purple-700'}`}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             View on GitHub
                         </a>
-
-                        <div className="shine-effect"></div>
                     </motion.div>
                 ))}
             </div>
