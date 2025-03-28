@@ -31,11 +31,13 @@ export function Projects() {
                         key={index}
                         className="p-4 border rounded-lg shadow-lg bg-gray-800 text-white relative overflow-hidden"
                         initial={{ boxShadow: "0px 0px 10px rgba(255, 255, 255, 0.2)" }}
-                        animate={{ boxShadow: [
+                        animate={{
+                            boxShadow: [
                                 "0px 0px 10px rgba(255, 255, 255, 0.2)",
                                 "0px 0px 20px rgba(255, 255, 255, 0.5)",
                                 "0px 0px 10px rgba(255, 255, 255, 0.2)"
-                            ] }}
+                            ]
+                        }}
                         transition={{ duration: 2, repeat: Infinity, repeatType: "mirror" }}
                     >
                         <h3 className="text-xl font-bold text-blue-300">{project.name}</h3>
@@ -49,6 +51,8 @@ export function Projects() {
                         >
                             View on GitHub
                         </a>
+
+                        <div className="shine-effect"></div>
                     </motion.div>
                 ))}
             </div>
