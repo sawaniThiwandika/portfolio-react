@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { FaGithub } from "react-icons/fa";
 
 interface ProjectsProps {
     darkMode: boolean;
@@ -27,41 +28,52 @@ export function Projects({ darkMode }: ProjectsProps) {
     ];
 
     return (
-        <section id="projects" className="p-6 text-center">
-            <h2 className={`text-3xl font-semibold ${darkMode ? 'text-purple-400' : 'text-purple-600'} mb-6`}>
+        <section id="projects" className="p-6 flex flex-col items-center justify-center text-center">
+            <h2 className={`text-3xl font-semibold ${darkMode ? 'text-purple-300' : 'text-purple-800'} mb-6`}>
                 Projects
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
                 {projects.map((project, index) => (
                     <motion.div
                         key={index}
-                        className="p-6 border rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 text-center"
+                        className={`p-6 border rounded-lg shadow-lg transition-transform duration-300 flex flex-col items-center justify-center ${
+                            darkMode ? 'bg-gray-900 border-gray-700 shadow-purple-500/50' : 'bg-white border-gray-300 shadow-lg'
+                        } hover:scale-105`}
                         initial={{ boxShadow: "0px 0px 10px rgba(255, 255, 255, 0.2)" }}
                         animate={{
                             boxShadow: [
-                                "0px 0px 10px rgba(255, 182, 193, 0.2)",
-                                "0px 0px 20px rgba(138, 43, 226, 0.5)",
-                                "0px 0px 10px rgba(230, 230, 250, 0.2)"
+                                darkMode
+                                    ? "0px 0px 10px rgba(200, 162, 200, 0.2)"
+                                    : "0px 0px 10px rgba(255, 182, 193, 0.2)",
+                                darkMode
+                                    ? "0px 0px 20px rgba(180, 100, 255, 0.5)"
+                                    : "0px 0px 20px rgba(138, 43, 226, 0.5)",
+                                darkMode
+                                    ? "0px 0px 10px rgba(180, 180, 255, 0.2)"
+                                    : "0px 0px 10px rgba(230, 230, 250, 0.2)"
                             ]
                         }}
                         transition={{ duration: 2, repeat: Infinity, repeatType: "mirror" }}
                     >
-                        <h3 className={`text-xl font-bold ${darkMode ? 'text-pink-400' : 'text-purple-600'}`}>
+                        <h3 className={`text-xl font-bold ${darkMode ? 'text-purple-300' : 'text-purple-600'}`}>
                             {project.name}
                         </h3>
-                        <p className={`mt-2 ${darkMode ? 'text-gray-400' : 'text-gray-700'}`}>
+                        <p className={`mt-2 ${darkMode ? 'text-gray-400' : 'text-gray-700'} text-center`}>
                             {project.description}
                         </p>
-                        <p className="mt-2 text-purple-400 font-semibold">
+                        <p className={`mt-2 font-semibold ${darkMode ? 'text-purple-400' : 'text-purple-600'}`}>
                             Technologies: {project.technologies.join(", ")}
                         </p>
                         <a
                             href={project.link}
-                            className={`mt-4 inline-block font-semibold ${darkMode ? 'text-purple-400 hover:text-purple-500' : 'text-purple-600 hover:text-purple-700'}`}
+                            className={`mt-4 inline-flex items-center gap-2 font-semibold ${
+                                darkMode ? 'text-purple-300 hover:text-purple-400' : 'text-purple-600 hover:text-purple-700'
+                            }`}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            View on GitHub
+                            <span className={darkMode ? 'text-gray-300' : 'text-gray-700'}>View on GitHub</span>
+                            <FaGithub className={`text-2xl ${darkMode ? 'text-gray-300' : 'text-gray-700'}`} />
                         </a>
                     </motion.div>
                 ))}
