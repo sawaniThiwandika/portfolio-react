@@ -30,7 +30,7 @@ export function Projects({ darkMode }: ProjectsProps) {
     return (
         <section id="projects" className="p-6 flex flex-col items-center justify-center text-center">
             <h2 className={`text-3xl font-semibold ${darkMode ? 'text-purple-300' : 'text-purple-800'} mb-6`}>
-                Projects
+                What I have done?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
                 {projects.map((project, index) => (
