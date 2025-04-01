@@ -18,9 +18,9 @@ export function NavBar({ darkMode, setDarkMode }: NavBarProps) {
         >
 
             <div className="flex items-center">
-                <img src={logo} alt="Logo" className="h-12 w-auto" />
-                <span className={`ml-2 text-lg font-semibold ${darkMode ? "hidden" : ""}
-                `}>Sawani Thiwandika</span>
+                <img src={logo} alt="Logo"   className={`h-12 w-auto ${darkMode ? "" : "hidden"}`} />
+                <span className={`ml-2 text-lg font-semibold ${darkMode ? "hidden" : "" }
+                `} style={{ fontFamily: 'Dancing Script, cursive' }}>Sawani Thiwandika </span>
             </div>
 
             <div className="hidden md:flex space-x-8 items-center">
