@@ -1,6 +1,7 @@
 import { FaBars, FaMoon, FaSun, FaTimes } from "react-icons/fa";
 import { useState } from "react";
 import logo from "../assets/logo/logo.png";
+import logo_black from "../assets/logo/logo_black.png";
 
 interface NavBarProps {
     darkMode: boolean;
@@ -19,8 +20,8 @@ export function NavBar({ darkMode, setDarkMode }: NavBarProps) {
 
             <div className="flex items-center">
                 <img src={logo} alt="Logo"   className={`h-12 w-auto ${darkMode ? "" : "hidden"}`} />
-                <span className={`ml-2 text-lg font-semibold ${darkMode ? "hidden" : "" }
-                `} style={{ fontFamily: 'Dancing Script, cursive' }}>Sawani Thiwandika </span>
+                <img src={logo_black} className={`h-12 w-auto${darkMode ? "hidden" : "" }`}/>
+
             </div>
 
             <div className="hidden md:flex space-x-8 items-center">

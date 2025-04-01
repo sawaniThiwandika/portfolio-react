@@ -63,7 +63,7 @@ export function ContactMe({ darkMode }: ContactMeProps) {
         >
             <div className="w-full max-w-6xl mx-auto p-8 rounded-2xl bg-opacity-90">
                 <h2 className="text-4xl font-extrabold mb-6 text-center bg-gradient-to-r text-transparent bg-clip-text from-purple-500 to-blue-600">
-                    Get in Touch
+                    Get In Touch
                 </h2>
                 <p className="text-lg text-center mb-8 opacity-80">
                     Have a question or want to work together? Fill out the form below, and I’ll get back to you as soon as possible.
