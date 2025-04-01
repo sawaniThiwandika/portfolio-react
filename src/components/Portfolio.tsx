@@ -7,6 +7,8 @@ import { ContactMe } from "./ContactMe.tsx";
 import { useState } from "react";
 import {Footer} from "./Footer.tsx";
 
+
+
 export function Portfolio() {
     const [darkMode, setDarkMode] = useState(true);
 
@@ -14,7 +16,7 @@ export function Portfolio() {
         <div className={`${darkMode ? "bg-black text-white" : "bg-white text-black "} min-h-screen transition-all justify-items-center`}>
             <NavBar darkMode={darkMode} setDarkMode={setDarkMode} />
 
-            <div className="container mx-auto px-6 flex flex-col items-center">
+            <div className="container mx-auto px-0 flex flex-col items-center">
                 <Intro />
                 <AboutMe darkMode={darkMode}  />
                 <TechStack darkMode={darkMode}  />

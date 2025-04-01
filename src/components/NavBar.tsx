@@ -24,7 +24,7 @@ export function NavBar({ darkMode, setDarkMode }: NavBarProps) {
             </div>
 
             <div className="hidden md:flex space-x-8 items-center">
-                {["About", "Service", "Projects", "Contact"].map((item) => (
+                {["About",  "Projects", "Contact"].map((item) => (
                     <a
                         key={item}
                         href={`#${item.toLowerCase()}`}
@@ -51,7 +51,7 @@ export function NavBar({ darkMode, setDarkMode }: NavBarProps) {
                     isOpen ? "translate-x-0" : "translate-x-full"
                 } flex flex-col items-center justify-center space-y-6 md:hidden z-50`}
             >
-                {["About", "Service", "Projects", "Contact"].map((item) => (
+                {["About",  "Projects", "Contact"].map((item) => (
                     <a
                         key={item}
                         href={`#${item.toLowerCase()}`}
@@ -69,6 +69,7 @@ export function NavBar({ darkMode, setDarkMode }: NavBarProps) {
                     {darkMode ? <FaSun className="text-yellow-400 text-2xl" /> : <FaMoon className="text-white text-2xl" />}
                 </button>
 
+                {/* Close Button */}
                 <button className="absolute top-6 right-6 text-white text-3xl" onClick={() => setIsOpen(false)}>
                     <FaTimes />
                 </button>

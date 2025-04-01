@@ -2,7 +2,7 @@ import { FaEnvelope, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import logo from "../assets/logo/logo.png"
 export function Footer() {
     return (
-        <footer className="w-full  py-6 mt-24 bg-gray-950 text-white">
+        <footer className="w-full  py-6 bg-gray-950 text-white">
             <div className="container mx-auto flex flex-col items-center space-y-4">
 
 
