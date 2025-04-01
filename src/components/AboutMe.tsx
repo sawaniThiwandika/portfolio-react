@@ -10,7 +10,7 @@ export function AboutMe({ darkMode }: AboutMeProps) {
 
     const content = `
         I am a dedicated Software Engineer from Sri Lanka, currently pursuing a BSc (Hons) in IT at the
-        University of Moratuwa and a GDSE diploma at IJSE. Passionate about full-stack development,
+        University of Moratuwa and GDSE diploma at IJSE. Passionate about full-stack development,
         I specialize in designing and building scalable, efficient, and user-friendly applications.
         
         With a strong problem-solving mindset and keen attention to detail, I excel in stress management,
