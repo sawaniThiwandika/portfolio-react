@@ -9,34 +9,43 @@ export function Projects({ darkMode }: ProjectsProps) {
     const projects = [
         {
             name: "GreenShadow - Farm Management System",
-            description: "GreenShadow is a full-stack farm management system designed to efficiently handle field operations, crop management, staff assignments, and vehicle tracking. It provides secure user authentication and role-based access. The system also includes logging and reporting features to monitor farm productivity.",
+            description: "GreenShadow is a full-stack farm management system designed to efficiently handle field" +
+                " operations, crop management, staff assignments, and vehicle tracking. It provides secure user authentication." +
+                " The system also includes logging and reporting features to monitor farm productivity.",
             technologies: ["React.js", "Node.js", "Express.js", "MySQL", "Prisma ORM", "JWT Authentication", "Tailwind CSS"],
             link: "https://github.com/sawaniThiwandika/green-shadow-frontend-with-react"
         },
         {
             name: "POS System",
-            description: "A web-based Point of Sale (POS) system that simplifies sales transactions, inventory tracking, and customer management. The system supports invoice generation, real-time stock updates, and user-friendly interfaces for easy navigation. It is designed for small to medium-sized businesses.",
+            description: "A web-based Point of Sale (POS) system that simplifies sales transactions, inventory tracking," +
+                " and customer management. The system supports invoice generation, real-time stock updates, and user-friendly" +
+                "interfaces for easy navigation. It is designed for small to medium-sized businesses.",
             technologies: ["HTML", "CSS", "JavaScript", "Java", "Spring", "Hibernate", "MySQL", "JDBC"],
             link: "https://github.com/sawaniThiwandika/pos-system-with-html"
         },
         {
             name: "MyDiary - Notes App",
-            description: "MyDiary is a mobile application that allows users to create, edit, and organize their notes with optional reminders and categories. The app supports offline storage and data synchronization with a backend server. It features a secure authentication system using JWT tokens.",
+            description: "MyDiary is a mobile application that allows users to create, edit, and organize their notes with" +
+                " optional reminders.It features a secure authentication system using JWT tokens.",
             technologies: ["React Native", "Expo", "TypeScript", "Node.js", "Express.js", "MySQL", "Prisma ORM", "JWT Authentication"],
             link: "https://github.com/sawaniThiwandika/green-shadow-frontend-with-react"
         },
         {
-            name: "Chat Application",
-            description: "A real-time chat application built using JavaFX and Java Sockets for communication. It allows users to send text messages, images, and media while maintaining chat history in a MySQL database. Supports multi-user chat rooms and threading for better performance.",
-            technologies: ["JavaFX", "Java", "MySQL", "JDBC", "Java Sockets"],
-            link: "https://github.com/sawaniThiwandika/chat-room.git"
-        },
-        {
             name: "DressAura - Dress Rental & Tailoring Management System",
-            description: "DressAura is a business management system for dress rentals and custom tailoring services. It allows businesses to manage inventory, customer orders, rental tracking, payments, and tailoring progress efficiently.",
+            description: "DressAura is a business management system for dress rentals and custom tailoring services. " +
+                "It allows businesses to manage inventory, customer orders, rental tracking, payments, and tailoring progress efficiently.",
             technologies: ["Java", "JavaFX", "MySQL", "JDBC"],
             link: "https://github.com/sawaniThiwandika/dressaura"
         },
+        {
+            name: "Chat Application",
+            description: "A real-time chat application built using JavaFX and Java Sockets for communication." +
+                " It allows users to send text messages, images, and media while maintaining chat history in a MySQL database." +
+                " Supports multi-user chat rooms and threading for better performance.",
+            technologies: ["JavaFX", "Java", "MySQL", "JDBC", "Java Sockets"],
+            link: "https://github.com/sawaniThiwandika/chat-room.git"
+        },
+
         {
             name: "BookWorm - Library Management System",
             description: "A JavaFX-based Library Management System that enables both users and admins to manage books, track borrow/return history, and handle user accounts. Admins can add, update, and remove books, while users can search, borrow, and return books. The system also features authentication and fine calculation for overdue returns.",
@@ -47,8 +56,8 @@ export function Projects({ darkMode }: ProjectsProps) {
     ];
 
     return (
-        <section id="projects" className="p-6 px-12 flex flex-col items-center justify-center text-center">
-            <h2 className={`text-4xl font-bold ${darkMode ? 'text-purple-300' : 'text-purple-800'} mb-6`}>
+        <section id="projects" className="mt-12 p-6 px-12 flex flex-col items-center justify-center text-center">
+            <h2 className={`text-4xl font-bold ${darkMode ? 'text-purple-400' : 'text-purple-600'} mb-6`}>
                 My Work So Far
             </h2>
             <br/>
