@@ -19,13 +19,12 @@ export function NavBar({ darkMode, setDarkMode }: NavBarProps) {
         >
 
             <div className="flex items-center">
-                <img src={logo} alt="Logo"   className={`h-12 w-auto ${darkMode ? "" : "hidden"}`} />
-                <img src={logo_black} className={`h-12 w-auto${darkMode ? "hidden" : "" }`}/>
-
+                <img src={logo} alt="Logo" className={`h-12 w-auto ${darkMode ? "" : "hidden"}`} />
+                <img src={logo_black} className={`h-12 w-auto ${darkMode ? "hidden" : ""}`} />
             </div>
 
             <div className="hidden md:flex space-x-8 items-center">
-                {["About",  "Projects", "Contact"].map((item) => (
+                {["About", "Projects", "Contact"].map((item) => (
                     <a
                         key={item}
                         href={`#${item.toLowerCase()}`}
@@ -48,15 +47,15 @@ export function NavBar({ darkMode, setDarkMode }: NavBarProps) {
             </button>
 
             <div
-                className={`fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm transition-transform transform ${
-                    isOpen ? "translate-x-0" : "translate-x-full"
-                } flex flex-col items-center justify-center space-y-6 md:hidden z-50`}
+                className={`fixed inset-0 bg-black backdrop-blur-sm transition-all transform ${isOpen ? "translate-x-0" : "translate-x-full"} 
+                            flex flex-col items-center justify-center space-y-6 md:hidden z-50 rounded-lg shadow-lg 
+                            ${darkMode ? "bg-gray-800 bg-opacity-70 " : "bg-purple-300 text-purple-900 bg-opacity-90 "}`}
             >
-                {["About",  "Projects", "Contact"].map((item) => (
+                {["About", "Projects", "Contact"].map((item) => (
                     <a
                         key={item}
                         href={`#${item.toLowerCase()}`}
-                        className="text-2xl font-semibold text-white border-b-2 border-transparent hover:border-purple-400 transition"
+                        className="text-2xl font-semibold border-b-2 border-transparent hover:border-purple-400 transition"
                         onClick={() => setIsOpen(false)}
                     >
                         {item}
@@ -71,7 +70,7 @@ export function NavBar({ darkMode, setDarkMode }: NavBarProps) {
                 </button>
 
                 {/* Close Button */}
-                <button className="absolute top-6 right-6 text-white text-3xl" onClick={() => setIsOpen(false)}>
+                <button className={`absolute top-6 right-6 text-3xl ${darkMode?"text-white":"text:black"}`} onClick={() => setIsOpen(false)}>
                     <FaTimes />
                 </button>
             </div>
