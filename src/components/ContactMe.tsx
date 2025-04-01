@@ -1,7 +1,8 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
-import {FaLinkedin, FaGithub, FaEnvelope, FaPaperPlane} from "react-icons/fa";
+import { FaPaperPlane } from "react-icons/fa";
+import Swal from "sweetalert2"; // Import SweetAlert2
 
 interface ContactMeProps {
     darkMode: boolean;
@@ -30,8 +31,22 @@ export function ContactMe({ darkMode }: ContactMeProps) {
                 formRef.current,
                 "b4RU0kERQGNgbQ-o9"
             ).then(
-                () => alert("✅ Message Sent Successfully!"),
-                (error) => alert("❌ Failed to send message: " + error.text)
+                () => {
+                    Swal.fire({
+                        title: "Success!",
+                        text: "✅ Message Sent Successfully!",
+                        icon: "success",
+                        confirmButtonText: "Cool",
+                    });
+                },
+                (error) => {
+                    Swal.fire({
+                        title: "Oops!",
+                        text: `❌ Failed to send message: ${error.text}`,
+                        icon: "error",
+                        confirmButtonText: "Try Again",
+                    });
+                }
             );
         }
     };
@@ -40,7 +55,7 @@ export function ContactMe({ darkMode }: ContactMeProps) {
         <motion.section
             id="contact"
             className={`w-full mt-24 min-h-screen flex items-center justify-center p-0 bg-gradient-to-b ${
-                darkMode ? "from-gray-900 via-gray-800 to-black text-gray-300" : "from-blue-100 via-purple-200 to-purple-300 text-gray-900"
+                darkMode ? "from-gray-900 via-gray-800 to-black text-gray-300" : "from-blue-100 via-purple-200 to-purple-300 text-gray-900 "
             }`}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -54,7 +69,7 @@ export function ContactMe({ darkMode }: ContactMeProps) {
                     Have a question or want to work together? Fill out the form below, and I’ll get back to you as soon as possible.
                 </p>
 
-                <div className="flex flex-col lg:flex-row justify-between gap-12">
+                <div className="flex flex-col lg:flex-row justify-center items-center gap-12">
                     <form
                         ref={formRef}
                         onSubmit={sendEmail}
@@ -98,41 +113,12 @@ export function ContactMe({ darkMode }: ContactMeProps) {
                         <motion.button
                             type="submit"
                             className="w-full p-3 rounded-lg font-semibold text-lg transition-all duration-300 bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:shadow-lg flex items-center justify-center gap-3"
-                            whileHover={{scale: 1.05}}
+                            whileHover={{ scale: 1.05 }}
                         >
-                            <FaPaperPlane className="w-5 h-5"/>
+                            <FaPaperPlane className="w-5 h-5" />
                             Send
                         </motion.button>
-
-                </form>
-
-                <div className="w-full lg:w-1/3 flex flex-col items-center lg:items-start space-y-6">
-                    <h3 className="text-2xl font-semibold">Connect With Me</h3>
-                    <div className="flex flex-col space-y-4 text-lg">
-                        <a
-                            href="https://www.linkedin.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-3 text-blue-600 hover:text-blue-800 transition-all"
-                            >
-                                <FaLinkedin className="w-7 h-7"/> LinkedIn
-                            </a>
-                            <a
-                                href="https://github.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-3 text-gray-700 hover:text-gray-900 transition-all"
-                            >
-                                <FaGithub className="w-7 h-7"/> GitHub
-                            </a>
-                            <a
-                                href="mailto:example@example.com"
-                                className="flex items-center gap-3 text-purple-600 hover:text-purple-800 transition-all"
-                            >
-                                <FaEnvelope className="w-7 h-7"/> Email Me
-                            </a>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </motion.section>
