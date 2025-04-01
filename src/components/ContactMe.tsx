@@ -36,7 +36,7 @@ export function ContactMe({ darkMode }: ContactMeProps) {
                         title: "Success!",
                         text: "✅ Message Sent Successfully!",
                         icon: "success",
-                        confirmButtonText: "Cool",
+                        confirmButtonText: "OK",
                     });
                 },
                 (error) => {
