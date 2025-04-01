@@ -48,7 +48,7 @@ export function Projects({ darkMode }: ProjectsProps) {
 
     return (
         <section id="projects" className="p-6 px-12 flex flex-col items-center justify-center text-center">
-            <h2 className={`text-3xl font-semibold ${darkMode ? 'text-purple-300' : 'text-purple-800'} mb-6`}>
+            <h2 className={`text-4xl font-bold ${darkMode ? 'text-purple-300' : 'text-purple-800'} mb-6`}>
                 My Work So Far
             </h2>
             <br/>
