@@ -24,15 +24,36 @@ export function Projects({ darkMode }: ProjectsProps) {
             description: "MyDiary is a mobile application that allows users to create, edit, and organize their notes with optional reminders and categories. The app supports offline storage and data synchronization with a backend server. It features a secure authentication system using JWT tokens.",
             technologies: ["React Native", "Expo", "TypeScript", "Node.js", "Express.js", "MySQL", "Prisma ORM", "JWT Authentication"],
             link: "https://github.com/sawaniThiwandika/green-shadow-frontend-with-react"
+        },
+        {
+            name: "Chat Application",
+            description: "A real-time chat application built using JavaFX and Java Sockets for communication. It allows users to send text messages, images, and media while maintaining chat history in a MySQL database. Supports multi-user chat rooms and threading for better performance.",
+            technologies: ["JavaFX", "Java", "MySQL", "JDBC", "Java Sockets"],
+            link: "https://github.com/sawaniThiwandika/chat-room.git"
+        },
+        {
+            name: "DressAura - Dress Rental & Tailoring Management System",
+            description: "DressAura is a business management system for dress rentals and custom tailoring services. It allows businesses to manage inventory, customer orders, rental tracking, payments, and tailoring progress efficiently.",
+            technologies: ["Java", "JavaFX", "MySQL", "JDBC"],
+            link: "https://github.com/sawaniThiwandika/dressaura"
+        },
+        {
+            name: "BookWorm - Library Management System",
+            description: "A JavaFX-based Library Management System that enables both users and admins to manage books, track borrow/return history, and handle user accounts. Admins can add, update, and remove books, while users can search, borrow, and return books. The system also features authentication and fine calculation for overdue returns.",
+            technologies: ["Java", "JavaFX", "Hibernate", "MySQL"],
+            link: "https://github.com/sawaniThiwandika/library-management-system"
         }
+
     ];
 
     return (
         <section id="projects" className="p-6 flex flex-col items-center justify-center text-center">
             <h2 className={`text-3xl font-semibold ${darkMode ? 'text-purple-300' : 'text-purple-800'} mb-6`}>
-                What I have done?
+                My Work So Far
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+            <br/>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-center">
                 {projects.map((project, index) => (
                     <motion.div
                         key={index}
