@@ -1,8 +1,12 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { motion } from "framer-motion";
 
-export function ContactMe() {
+interface ContactMeProps {
+    darkMode: boolean;
+}
+
+export function ContactMe({ darkMode }: ContactMeProps) {
     const formRef = useRef<HTMLFormElement>(null);
     const [formData, setFormData] = useState({
         name: "",
@@ -32,17 +36,39 @@ export function ContactMe() {
     };
 
     return (
-        <section id="contact" className="p-6 text-center">
-            <h2 className="text-3xl font-semibold text-blue-400 mb-4">Contact Me</h2>
+        <motion.section
+            id="contact"
+            className={`mt-14 p-8 text-center rounded-2xl shadow-xl transition-all duration-300 border ${
+                darkMode ? "border-gray-700 text-white" : "border-gray-200 text-gray-900"
+            }`}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+        >
+            <h2
+                className={`text-4xl font-extrabold mb-6 bg-gradient-to-r text-transparent bg-clip-text ${
+                    darkMode ? "from-purple-400 to-purple-600" : "from-blue-500 to-purple-700"
+                }`}
+            >
+                Get in Touch
+            </h2>
 
-            <form ref={formRef} onSubmit={sendEmail} className="max-w-md mx-auto bg-gray-800 p-6 rounded-lg shadow-lg">
+            <p className="text-lg mb-8 opacity-80">
+                Have a question or want to work together? Fill out the form below, and I’ll get back to you as soon as possible.
+            </p>
+
+            <form
+                ref={formRef}
+                onSubmit={sendEmail}
+                className="max-w-lg mx-auto p-6 rounded-xl shadow-md space-y-4"
+            >
                 <input
                     type="text"
                     name="name"
                     placeholder="Your Name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full p-3 mb-4 bg-gray-700 text-white rounded-lg focus:outline-none"
+                    className="w-full p-3 rounded-lg border focus:ring-2 focus:outline-none"
                     required
                 />
                 <input
@@ -51,7 +77,7 @@ export function ContactMe() {
                     placeholder="Your Contact Number"
                     value={formData.contact_number}
                     onChange={handleChange}
-                    className="w-full p-3 mb-4 bg-gray-700 text-white rounded-lg focus:outline-none"
+                    className="w-full p-3 rounded-lg border focus:ring-2 focus:outline-none"
                     required
                 />
                 <input
@@ -60,7 +86,7 @@ export function ContactMe() {
                     placeholder="Your Email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full p-3 mb-4 bg-gray-700 text-white rounded-lg focus:outline-none"
+                    className="w-full p-3 rounded-lg border focus:ring-2 focus:outline-none"
                     required
                 />
                 <textarea
@@ -68,27 +94,17 @@ export function ContactMe() {
                     placeholder="Your Message"
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full p-3 mb-4 bg-gray-700 text-white rounded-lg focus:outline-none h-32"
+                    className="w-full p-3 rounded-lg border h-32 focus:ring-2 focus:outline-none"
                     required
                 />
-                <button
+                <motion.button
                     type="submit"
-                    className="w-full bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-lg transition duration-300">
+                    className="w-full p-3 rounded-lg font-semibold text-lg transition-all duration-300 bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:shadow-lg"
+                    whileHover={{ scale: 1.05 }}
+                >
                     Send Message
-                </button>
+                </motion.button>
             </form>
-
-            <div className="mt-6 flex justify-center space-x-6">
-                <a href="https://github.com/sawaniThiwandika" target="_blank" rel="noopener noreferrer" className="text-white text-2xl hover:text-gray-400">
-                    <FaGithub />
-                </a>
-                <a href="https://linkedin.com/in/sawaniThiwandika" target="_blank" rel="noopener noreferrer" className="text-blue-400 text-2xl hover:text-blue-300">
-                    <FaLinkedin />
-                </a>
-                <a href="mailto:sawani@example.com" className="text-pink-400 text-2xl hover:text-pink-300">
-                    <FaEnvelope />
-                </a>
-            </div>
-        </section>
+        </motion.section>
     );
 }
