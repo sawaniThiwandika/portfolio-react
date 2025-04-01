@@ -17,7 +17,7 @@ export function Portfolio() {
             <NavBar darkMode={darkMode} setDarkMode={setDarkMode} />
 
             <div className="container mx-auto px-0 flex flex-col items-center">
-                <Intro />
+                <Intro darkMode={darkMode} />
                 <AboutMe darkMode={darkMode}  />
                 <TechStack darkMode={darkMode}  />
                 <Projects darkMode={darkMode} />
