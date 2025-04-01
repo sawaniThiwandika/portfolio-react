@@ -7,7 +7,7 @@ interface IntroProps {
 export function Intro({ darkMode }: IntroProps) {
 
     return (
-        <section className={`text-center sm: mt-16 md:mt-24 lg:mt-24 flex flex-col md:flex-row items-center justify-between`}>
+        <section className={`text-center sm: mt-12 md:mt-24 lg:mt-24 flex flex-col md:flex-row items-center justify-between`}>
             <div className="text-center sm: mt--7 md:text-left mb-6 md:mb-0 md:w-3/5 order-last md:order-first justify-items-center">
                 <p className="justify-center text-3xl md:text-4xl lg:text-5xl font-medium">I'm Sawani Thiwandika</p>
                 <p className="mt-2 text-lg">From Sri Lanka | Coding & Innovation</p>
