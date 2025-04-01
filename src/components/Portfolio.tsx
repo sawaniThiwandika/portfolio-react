@@ -2,10 +2,10 @@ import { NavBar } from "./NavBar.tsx";
 import { Intro } from "./Intro.tsx";
 import { AboutMe } from "./AboutMe.tsx";
 import { TechStack } from "./TechStack.tsx";
-import { Service } from "./Service.tsx";
 import { Projects } from "./Projects.tsx";
 import { ContactMe } from "./ContactMe.tsx";
 import { useState } from "react";
+import {Footer} from "./Footer.tsx";
 
 export function Portfolio() {
     const [darkMode, setDarkMode] = useState(true);
@@ -18,9 +18,9 @@ export function Portfolio() {
                 <Intro />
                 <AboutMe darkMode={darkMode}  />
                 <TechStack darkMode={darkMode}  />
-                <Service />
                 <Projects darkMode={darkMode} />
-                <ContactMe />
+                <ContactMe darkMode={darkMode} />
+                <Footer />
             </div>
         </div>
     );
