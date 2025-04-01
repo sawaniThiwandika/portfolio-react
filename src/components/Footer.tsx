@@ -1,8 +1,12 @@
 import { FaEnvelope, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import logo from "../assets/logo/logo.png"
-export function Footer() {
+interface FooterProps {
+    darkMode: boolean;
+}
+export function Footer({ darkMode }: FooterProps) {
+
     return (
-        <footer className="w-full  py-6 bg-gray-950 text-white">
+        <footer className={`w-full py-6 ${darkMode ? "bg-gray-950" : "bg-gray-800"} text-white`}>
             <div className="container mx-auto flex flex-col items-center space-y-4">
 
 
@@ -26,7 +30,7 @@ export function Footer() {
                         className="text-gray-400 text-2xl hover:text-white transition duration-300"
                         aria-label="GitHub"
                     >
-                        <FaGithub />
+                        <FaGithub/>
                     </a>
                     <a
                         href="https://linkedin.com/in/sawaniThiwandika"
@@ -35,7 +39,7 @@ export function Footer() {
                         className="text-blue-400 text-2xl hover:text-blue-300 transition duration-300"
                         aria-label="LinkedIn"
                     >
-                        <FaLinkedin />
+                        <FaLinkedin/>
                     </a>
                     <a
                         href="https://instagram.com/thiwandika_w.h.s"
@@ -44,14 +48,14 @@ export function Footer() {
                         className="text-pink-400 text-2xl hover:text-pink-300 transition duration-300"
                         aria-label="Instagram"
                     >
-                        <FaInstagram />
+                        <FaInstagram/>
                     </a>
                     <a
                         href="mailto:thiwandika.whs02@gmail.com"
                         className="text-red-400 text-2xl hover:text-red-300 transition duration-300"
                         aria-label="Email"
                     >
-                        <FaEnvelope />
+                        <FaEnvelope/>
                     </a>
                 </div>
                 <p className="text-sm text-gray-400">
