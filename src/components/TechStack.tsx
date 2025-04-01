@@ -1,5 +1,5 @@
 import { SiReact, SiReactrouter, SiTailwindcss, SiBootstrap, SiHtml5, SiCss3, SiJavascript,
-    SiTypescript, SiSpringboot, SiPython, SiNodedotjs, SiFirebase, SiMysql, SiMongodb,
+    SiTypescript, SiSpringboot, SiPython, SiNodedotjs, SiMysql, SiMongodb,
     SiFigma, SiPostman, SiC, SiExpress } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 
@@ -48,10 +48,9 @@ export function TechStack({darkMode}: TechStackProps) {
                     </h3>
                     <ul className={`mt-4 ${darkMode ? 'text-gray-400' : 'text-gray-700'} font-medium space-y-3`}>
                         <li className="flex items-center space-x-2"><SiSpringboot size={20} /><span>Java (Spring Boot)</span></li>
-                        <li className="flex items-center space-x-2"><SiPython size={20} /><span>Python</span></li>
                         <li className="flex items-center space-x-2"><SiNodedotjs size={20} /><span>Node.js</span></li>
                         <li className="flex items-center space-x-2"><SiExpress size={20} /><span>Express.js</span></li>
-                        <li className="flex items-center space-x-2"><SiFirebase size={20} /><span>Firebase</span></li>
+
                     </ul>
                 </div>
 
