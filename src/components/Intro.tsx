@@ -19,12 +19,22 @@ export function Intro({ darkMode }: IntroProps) {
                         Connecting the dots in the invisible tapestry of brilliance;
                     </p>
 
-                    <a
-                        href="#contact"
-                        className="mt-10 inline-block px-6 py-2 text-white bg-purple-500 hover:bg-purple-600 rounded-full transition"
-                    >
-                        Contact Me
-                    </a>
+                    <div className="mt-10 flex flex-col sm:flex-row gap-4">
+                        <a
+                            href="#contact"
+                            className="inline-block px-6 py-2 text-white bg-purple-500 hover:bg-purple-600 rounded-full transition"
+                        >
+                            Contact Me
+                        </a>
+                        <a
+                            href="https://sawanithiwandika.github.io/my_cv/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block px-6 py-2 text-purple-700 border border-purple-500 hover:bg-purple-100 rounded-full transition"
+                        >
+                            View My CV
+                        </a>
+                    </div>
                 </div>
             </div>
 
